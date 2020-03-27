@@ -11,5 +11,4 @@ LAUNCH_MININET='sudo mn --topo single,7 --mac --controller remote --switch ovsk'
 SET_OPENFLOW_VERSION='sudo  ovs−vsctl  set  bridge  s1  protocols=OpenFlow10 &'
 
 xfce4-terminal --hold --geometry 100x30+0+0 --command "$LAUNCH_MININET" -T 'Mininet' &
-$LAUNCH_CONTROLLER
 xfce4-terminal --hold --geometry 120x30+880+0 --working-directory='/home/ubuntu/pox' --command "$LAUNCH_CONTROLLER"  -T 'Controller' &
