@@ -222,7 +222,7 @@ class SimpleLoadBalancer(object):
 				# Send the first packet (which was sent to the controller from the switch)
 				# to the chosen server, so there is no packetloss
 				msg= # TODO: Create an instance of a message which can be used to instruct the switch to send a packet
-				msg.data = e.pack()
+				msg.data = eth.pack()
 				msg.in_port = # TODO: Set the correct in_port
 				
 				# TODO: Add an action which sets the MAC source to the LB's MAC
@@ -256,7 +256,7 @@ class SimpleLoadBalancer(object):
 					# Send the first packet (which was sent to the controller from the switch)
 					# to the chosen server, so there is no packetloss
 					msg =  # TODO: Create an instance of a message which can be used to instruct the switch to send a packet
-					msg.data = e.pack()
+					msg.data = eth.pack()
 					msg.in_port =  # TODO: Set the correct in_port
 
 					# TODO: Add an action which sets the MAC source to the LB's MAC
